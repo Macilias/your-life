@@ -1,0 +1,33 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "marvin"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            {"queryPatterns": "I want to talk to marvin"},
+            {"queryPatterns": "talk to marvin"},
+            {"queryPatterns": "wake up marvin"},
+            {"queryPatterns": "is marvin there?"},
+            {"queryPatterns": "where is marvin?"},
+            {"queryPatterns": "hello marvin"},
+            {"queryPatterns": "pass me to marvin"},
+            {"queryPatterns": "marvin please"}
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "marvin": {
+      "name": "marvin",
+      "url": "https://your-life.herokuapp.com/sidekick/api/v1/"
+    }
+  }
+
+}

@@ -1,0 +1,49 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            {"queryPatterns": "I want to talk to sidekick"},
+            {"queryPatterns": "talk to sidekick"},
+            {"queryPatterns": "wake up sidekick"},
+            {"queryPatterns": "is sidekick there?"},
+            {"queryPatterns": "where is sidekick?"},
+            {"queryPatterns": "hello sidekick"},
+            {"queryPatterns": "pass me to sidekick"},
+            {"queryPatterns": "sidekick please"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "UPDATE",
+      "intent": {
+        "name": "com.macilias.apps.model.sidekick.api.v1.Intent.UPDATE",
+        "parameters": [
+          {"name": "com.macilias.apps.model.sidekick.api.v1.ArgumentName.WHERE", "type": "String"},
+          {"name": "com.macilias.apps.model.sidekick.api.v1.ArgumentName.SINCE", "type": "String"}
+        ],
+        "trigger": {
+          "queryPatterns": [
+            {"queryPattern": "I need an update"},
+            {"queryPattern": "ask him for update"},
+            {"queryPattern": "how is the status" }
+          ]
+        }
+      },
+      "fulfillment": {
+        "conversationName": "sidekick"
+      }
+    }
+  ],
+  "conversations": {
+    "sidekick": {
+      "name": "sidekick",
+      "url": "https://your-life.herokuapp.com/marvin/api/v1/"
+    }
+  }
+}

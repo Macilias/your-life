@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "sidekick"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            {"queryPatterns": "I want to talk to sidekick"},
+            {"queryPatterns": "talk to sidekick"},
+            {"queryPatterns": "wake up sidekick"},
+            {"queryPatterns": "is sidekick there?"},
+            {"queryPatterns": "where is sidekick?"},
+            {"queryPatterns": "hello sidekick"},
+            {"queryPatterns": "pass me to sidekick"},
+            {"queryPatterns": "sidekick please"}
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "sidekick": {
+      "name": "sidekick",
+      "url": "https://your-life.herokuapp.com/sidekick/api/v1/"
+    }
+  }
+}

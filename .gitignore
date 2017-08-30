@@ -3,6 +3,8 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
 *.iml
+.DS_Store
+*/*/.DS_Store
 
 ## Directory-based project format:
 .idea/*
@@ -35,6 +37,7 @@
 
 # IntelliJ
 /out/
+/target
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,4 +51,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 
-/src/main/resources/rebel*.xml
+/main/resources/rebel*.xml
+
+*.jar

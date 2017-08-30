@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Your Life / Testpage</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+		<style type="text/css">
+			.console div.error {
+				/*rgb(1, 233, 215)*/
+				background-color: rgb(200, 255, 255) !important;
+				text-align: left;
+			}
+			.console div {
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="hd">
+			<div id="logo">
+				<img src="your-life.png" width="50px" height="50px" alt="Your Life Logo" />
+				<h1>Your Life / Testpage</h1>
+			</div>
+		</div>
+		<div id="bd">
+			<form wicket:id="form" id="form" action="#">
+				<input wicket:id="create1" type="submit" value="create new book" />
+				<input wicket:id="query1"  type="submit" value="query collection" />
+				<br/>
+				<input wicket:id="create2" type="submit" value="create new crap" />
+				<input wicket:id="query2"  type="submit" value="query collection" />
+				<input wicket:id="query3"  type="submit" value="anna" />
+				<input wicket:id="query4"  type="submit" value="sidekick" />
+				<input wicket:id="query5"  type="submit" value="query all" />
+			</form>
+			<br/>
+			<div id="anna-panel">
+				<div wicket:id="console" style="height: 250px;"></div>
+				<br/>
+				<form wicket:id="anna" style="float: right">
+					<input wicket:id="message" style="width: 600px;" />
+					<button wicket:id="button" >OK</button>
+				</form>
+			</div>
+		</div>
+		<div id="ft">
+		</div>
+	</body>
+</html>
