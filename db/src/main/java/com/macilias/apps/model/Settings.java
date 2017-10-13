@@ -13,6 +13,9 @@ public interface Settings {
 
     int FUSEKI_PORT = 4321;
 
+    String GOOGLE_APPLICATION_CREDENTIALS = System.getenv("GOOGLE_APPLICATION_CREDENTIALS");
+
+
     String CROWD_TANGLE_API_TOKEN = System.getenv("CROWD_TANGLE_API_TOKEN");
     String CROWD_TANGLE_LIST_ID = System.getenv("CROWD_TANGLE_LIST_ID");
 

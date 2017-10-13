@@ -1,5 +1,6 @@
 package com.macilias.apps.controller;
 
+import com.google.cloud.language.v1.AnalyzeSyntaxResponse;
 import com.macilias.apps.model.*;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -11,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import java.util.*;
 
+import static com.macilias.apps.controller.SyntaxDetector.*;
 import static com.macilias.apps.model.Keyword.*;
 
 /**
@@ -28,6 +30,10 @@ public class AnnaImpl implements Anna {
 
     @Override
     public Optional<String> consume(Sentence sentence) {
+
+        AnalyzeSyntaxResponse syntax = getSyntax(sentence.getOriginal());
+        LOG.info(syntax);
+
         try {
             LOG.debug("consume(): " + sentence.getOriginal());
             String[] split = sentence.getOriginal().split("[\\p{Punct}\\s]+");

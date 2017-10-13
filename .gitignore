@@ -4,7 +4,6 @@
 
 *.iml
 .DS_Store
-*/*/.DS_Store
 
 ## Directory-based project format:
 .idea/*
@@ -38,6 +37,8 @@
 # IntelliJ
 /out/
 /target
+*/target/*
+*.log
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/

@@ -11,7 +11,7 @@
 
     <artifactId>nlp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>your life rocks 3rd party nlp communication interfaces</name>
+    <name>your life rocks 3rd party communication interfaces</name>
     <description>personal assistants via external sources</description>
 
     <properties>
